@@ -1,0 +1,50 @@
+OS-Analyse Wahl:
+Android / Cyanogenmod
+Sailfish OS
+Firefox OS
+Maemo
+Ubuntu Phone
+iOS
+
+Warum setzen sich Smartphone-OS nicht so gut durch wie PC OS?
+GSM: Einige Module dürfen nicht frei gemacht werden (gesetzeswidrig)
+Phones waren von Anfang an Consumer Devices (nicht so nerdy wie Computer)
+Hardware sehr viel geschlossener / besser vor Veränderungen geschützt
+Smartphones kamen später: Erster populärer PC: Commodore PET   vs.   Erstes Smartphone mit starkem soz. Impact: iPhone
+
+Technische vs rechtliche Offenheit ==> 1
+z.B. Mitarbeiter macht Code illegal öffentlich: Technisch OSS, Rechtlich nicht
+
+Touch-Input macht einen Unterschied: Entwicklung der Smartphones
+
+Was ist ein Mobile OS? Internet, Telefon, tragbar, Batterie: Unmöglich zu definieren (e.g. Android TV) ==> 1
+
+Ich erwarte von einem Offenen OS: ==> 1 core!
+Software aus beliebigen Quellen ausführen,
+alle Sources bekommen,
+als Nutzer alle (technisch machbaren) Rechte ("root") bekommen können (ohne, dass Fuses triggern, e.g. Knox Flag Samsung),
+beliebige Änderungen tun zu können und diese Änderungen teilen können (im Rahmen der Lizenz) wobei kein Garantieverlust bei Veränderung der Software, kein Funktionsverlust (e.g. Kreditkartenemulation)
+-> Annahme: Hardware verhält sich spezifikationsgemäss und ist "offen genug" (z.B. Whitelisting / verschlüsselte Calls)
+
+Probleme:
+Was ist ein Smartphone (IBM Simon vs. Nokia Nokia 9210 Communicator vs. Nokia 770 Internet Tablet vs. iPhone)? Schwierig zu sagen, hier sind Beispiele.
+Was gehört zum OS (z.B. Kreditkartenfunktion = App)? OS := out of the box vom Anbieter (Hersteller / Distro / ...)
+Komplett freies Mobile OS nicht machbar!
+
+Mickey möchte schreiben über:
+Maemo: History, wie funktioniert der AppStore, wie entwickelt sich die Community, wie ist die rechtliche / technische Offenheit, Nachfolger, wieso hat's sich nicht durchgesetzt?
+Dasselbe für Sailfish OS
+Nokia N900: Arbeiten der ETH, mit Maemo 5.0, Erfahrungsbericht
+
+Sandro über:
+Ubuntu Phone: Wie frei ist es, wieso hat Ubuntu Edge nicht geklappt, wieso will niemand von den Grossen Ubuntu Phones herstellen, wieso ist es so schwer, in den Markt zu kommen? ==> Punkt 3
+  ==> Übergang zu "Was bedeutet es für die Hardware-Anbieter und die Endkunden, wenn offene Smartphones zur Verfügung stehen?"
+          ==> Wer maintaint das? Müssen die HW-Hersteller viel dafür arbeiten / welche Macht haben sie?
+iOS
+
+Aline über:
+Firefox OS
+Android
+
+Jeder über:
+Erfahrungsbericht Android (gilt als "offenes" OS)
