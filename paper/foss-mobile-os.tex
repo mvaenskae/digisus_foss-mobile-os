@@ -5,11 +5,10 @@
 \usepackage[T1]{fontenc}
 \usepackage[pdfborder={0 0 0}]{hyperref}
 \usepackage[hyperref=auto,citereset=section,texencoding=utf8,bibencoding=utf8,backend=biber]{biblatex}
-\usepackage{fancyhdr,parskip,setspace,url,tabularx,float,hypcap,multicol}
+\usepackage{fancyhdr,parskip,setspace,url,tabularx,float,hypcap,multicol,enumitem}
 \usepackage[pdftex]{color,graphicx}
-\usepackage{ccicons}
 \usepackage[font=scriptsize,format=plain,labelfont=bf,textfont=it,justification=justified,singlelinecheck=false,skip=0.05cm,labelsep=endash]{caption}
-\usepackage[a4paper,left=20mm,right=20mm,top=35mm]{geometry}
+\usepackage[a4paper,left=20mm,right=20mm,top=30mm]{geometry}
 \usepackage[compact]{titlesec}
 
 % Path for images
@@ -18,8 +17,13 @@
 % Default label
 \def\labelitemi{--}
 
+% Main bibliography ressource
 \addbibresource{bibliography.bib}
-\pagestyle{fancyplain}
+
+% Default pagestyle
+\pagestyle{empty}
+
+% Spacings in the document
 \setlength{\columnsep}{20pt}
 \titlespacing{\section}{0pt}{*0}{*0}
 \titlespacing{\subsection}{0pt}{*0}{*0}
@@ -27,76 +31,76 @@
 \setlength{\parskip}{0pt}
 \setlength{\parsep}{0pt}
 
+% Set counterlevel one down
 \setcounter{secnumdepth}{-1}
+
+% Penalties
 \widowpenalty=500
 \clubpenalty=500
 \hyphenpenalty=500
 \tolerance=500
 
 \begin{document}
-\input{./cover.tex}
-
-\pagestyle{plain}
-\fancyhead{}
-\fancyfoot{}
-\cleardoublepage
-
-\tableofcontents
-\cleardoublepage
-
-\pagestyle{fancyplain}
-\setcounter{page}{1}
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-\fancyhead{}
-\fancyfoot{}
-\fancyhead[LO,RE]{HS -- 2015}
-\fancyhead[CO,CE]{Open Source Mobiles}
-\fancyhead[RO,LE]{Digitale Nachhaltigkeit}
-\fancyfoot[RO,LE]{\thepage}
-\fancyfoot[LO,RE]{\includegraphics[height=5mm]{by-nc-sa-eu.png}}
-\begin{multicols*}{2}
-\begin{refsection}
-\setcounter{figure}{0}
-\setcounter{table}{0}
-
-\section{Einführung}
-\input{chapters/00_intro}
-\pagebreak
-
-\section{Android}
-\input{chapters/10_android}
-\pagebreak
-
-\section{Firefox OS}
-\input{chapters/11_firefox-os}
-\pagebreak
-
-\section{Sailfish OS}
-\input{chapters/12_sailfish-os}
-\pagebreak
-
-\section{Maemo}
-\input{chapters/13_maemo}
-\pagebreak
-
-\section{Ubuntu Phone}
-\input{chapters/14_ubuntu-phone}
-\pagebreak
-
-\section{iOS}
-\input{chapters/15_ios}
-\pagebreak
-
-\section {Auswirkungen auf Hardware-Anbieter}
-\input{chapters/20_hardware}
-\vfill
-\columnbreak
-
-\section{Schlusswort}
-\input{chapters/21_fin}
-\pagebreak
-
-\printbibliography
-\end{refsection}
-\end{multicols*}
+	\input{./cover.tex}
+	\cleardoublepage
+	
+	\tableofcontents
+	\cleardoublepage
+	
+	\pagestyle{fancyplain}
+	\setcounter{page}{1}
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+	\fancyhead{}
+	\fancyfoot{}
+	\fancyhead[LO,RE]{HS -- 2015}
+	\fancyhead[CO,CE]{Open Source Mobiles}
+	\fancyhead[RO,LE]{Digitale Nachhaltigkeit}
+	\fancyfoot[RO,LE]{\thepage}
+	\fancyfoot[LO,RE]{\includegraphics[height=5mm]{by-nc-sa-eu.png}}
+	\begin{multicols*}{2}
+		\raggedcolumns
+		\begin{refsection}
+			\setcounter{figure}{0}
+			\setcounter{table}{0}
+	
+			\section{Einführung}
+			\input{chapters/00_intro}
+			\pagebreak
+			
+			\section{Android}
+			\input{chapters/10_android}
+			\pagebreak
+			
+			\section{Firefox OS}
+			\input{chapters/11_firefox-os}
+			\pagebreak
+			
+			\section{Sailfish OS}
+			\input{chapters/12_sailfish-os}
+			\pagebreak
+			
+			\section{Maemo}
+			\input{chapters/13_maemo}
+			\pagebreak
+			
+			\section{Ubuntu Phone}
+			\input{chapters/14_ubuntu-phone}
+			\pagebreak
+			
+			\section{iOS}
+			\input{chapters/15_ios}
+			\pagebreak
+			
+			\section {Auswirkungen auf Hardware-Anbieter}
+			\input{chapters/20_hardware}
+			\vfill
+			\columnbreak
+			
+			\section{Schlusswort}
+			\input{chapters/21_fin}
+			\pagebreak
+			
+			\printbibliography
+		\end{refsection}
+	\end{multicols*}
 \end{document}
