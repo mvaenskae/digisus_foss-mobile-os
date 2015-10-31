@@ -1,5 +1,6 @@
-Firefox OS wird hauptsächlich von Mozilla entwickelt und basiert auf Gecko - dem HTML-Renderer von Firefox - und dem Linux Kernel\cite{online:ff-architecture}. Vorgestellt wurde es erstmals im Februar 2012\cite{online:ff-techhive-b2g}.
+Firefox OS wird hauptsächlich von Mozilla entwickelt und basiert auf Gecko - dem HTML-Renderer von Firefox - und dem Linux Kernel\cite{online:ff-architecture}. Vorgestellt wurde es erstmals im Februar 2012\cite{online:ff-techhive-b2g}.\\
 
+\subsection{Rechtliche Offenheit}
 Der in Firefox OS verwendete Kernel wurde vom Android Open Source Project übernommen und ist daher GPL v2 lizenziert\cite{online:kernel-license}. Sämtliche von Mozilla entwickelte Software läuft unter der ``Mozilla Public License'' (MPL)\cite{online:mozilla-licensing}. Die MPL ist eine Open-Source-Lizenz und copyleft\cite{online:mpl}.
 
 Andreas Gal, der damalige Director of Research von Mozilla, behauptete nach der Veröffentlichung von Firefox OS im 2012, dass im ganzen Betriebssystem keine proprietäre Software involviert sei\cite{online:knowyourmobile-b2g}. Leider blieb das nicht so: 2014 begann Mozilla, die ``W3C Encrypted Media Extension'' (EME) zu implementieren\cite{online:mozilla-eme}. Die EME  ist eine Erweiterung, die es ermöglicht, DRM-geschützte Webinhalte nativ - also ohne die Verwendung von Plugins - auszuführen. Dazu ist die Benutzung eines proprietären Entschlüsselungsmoduls nötig\cite{online:mozilla-eme}, welches mittlerweile in Gecko - und somit auch in Firefox OS - enthalten ist.
@@ -9,5 +10,17 @@ Grund für diesen Entscheid war, dass Firefox und Firefox OS, um mit der Konkurr
 Mozilla war über diesen Entscheid selbst nicht glücklick\cite{online:ff-drm-implementation}, hielt den Kompromiss aber für notwendig, um marktfähig zu bleiben. Das Resultat ist, dass Firefox OS nun kein vollständig freies Betriebssystem mehr ist. \\
 
 
+\subsection{Technische Offenheit}
+Firefox OS verwendet ein interessantes Konzept: Das System baut auf Gecko auf und arbeitet hauptsächlich mit HTML5 und Javascript. Das User Interface, genannt Gaia, ist ausschliesslich in HTML, CSS und Javascript geschrieben und kommuniziert mit dem Betriebssystem durch offene Web-APIs, welche in Gecko implementiert sind.\cite{online:ff-gaia}. Sämtliche Apps, die auf Firefox OS laufen sollen, können ebenfalls diese APIs verwenden, um mit der Hardware des Geräts zu kommunizieren\cite{online:ff-webapi}. Dies macht das Entwickeln von Apps sehr einfach, da diese in HTML und Javascript geschrieben werden können\cite{online:ff-apps}, und erlaubt es auch Webseiten, mit der Hardware zu interagieren. Dieses Konzept eröffnet neue Möglichkeiten und hat sehr viel Potential, insbesondere, wenn es auch in anderen Bereichen eingesetzt wird.
 
 
+\subsection{Community}
+Mozilla legt sehr viel Wert darauf, eine aktive und für jeden zugängliche Community zu pflegen\cite{online:mozilla-volunteer}. Die Mitwirkenden, die sich selbst Mozillians nennen, identifizieren sich mit Mozillas Mission, "ein Web zu erstellen, in dem die Leute mehr wissen, mehr tun, und es besser tun"\cite{online:mozilla-community}. 
+Jeder, der mithelfen möchte, wird ermutigt, sich der Community anzuschliessen. Dabei sind nicht nur Entwickler angesprochen, sondern auch Tester, Helfer, Übersetzer und Aktivisten\cite{online:mozilla-get-involved}. 
+
+Mozilla verfügt über eine Mailingliste\cite{online:mozilla-mailinglist}, eine Newsgroup\cite{online:mozilla-community}, ein eigenes IRC-Netzwerk\cite{online:mozilla-community} und diverse Social-Media-Kanäle\cite{online:mozilla-google-group}\cite{online:mozilla-twitter}. Ausserdem gibt es ein Supportforum\cite{online:mozilla-support}, in welchem auch eine Sektion für Firefox OS erstellt wurde. 
+
+Diese Community beschäftigt sich zwar nicht ausschliesslich mit Firefox OS, sondern auch mit allen anderen Mozilla-Projekten - insbesondere Firefox selbst - doch für Interessierte ist es leicht, die richtigen Kanäle zu finden.\\
+
+\subsection{Fazit}
+Firefox OS ist wohl eines der offensten mobilen Betriebssysteme, die man heute bekommt. Durch die Implementierung der EME ist es aber nicht vollständig frei. Zum Einen kann man sagen, dass dieser Kompromiss notwendig war; andererseits war diese Entscheidung Mozillas inkonsequent und entspricht nicht ihrer selbsternannten Mission. Es ist schade, dass solche Kompromisse im heutigen Markt nötig sind.
