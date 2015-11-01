@@ -1,0 +1,97 @@
+IRC Log from #fxos on irc.mozilla.org - 2015-10-31 from 16:33 to 20:13
+Joins, quits and nickname changes have been omitted
+[16:33:16] <Alinea> Hello, I'm writing a paper about open source mobile operating systems and have a question about firefox os. I can't seem to find reliable information on this on the web.
+[16:34:24] <Alinea> Does firefox os have anything akin to root access on Android? I mean, can you 'root' a Firefox OS phone, and does that have any use?
+[16:48:37] <eyome> Alinea: as far as I know, Flame was rooted by default
+[16:49:07] <Alinea> eyome: Alright, that's cool
+[16:49:20] <Alinea> So that means it also depends on the manufacturer?
+[16:49:55] <fabrice> yes. No commercial phone should be rooted by default
+[16:50:02] <eyome> Alinea: others phones, as Open C has to be rooted to upgrade the rom
+[16:50:08] <Alinea> I see.
+[16:50:08] <Marc0> Alinea: unfortunately yes :(
+[16:50:26] <Marc0> I suffer from an Alcatel One Touch
+[16:51:27] <eyome> Marc0: you can't root your phone?
+[16:51:35] <Marc0> fabrice: Whats your point?
+[16:51:42] <Marc0> eyome: no, I can't
+[16:52:07] <Marc0> eyome: or I'm just too stupid
+[16:52:10] <fabrice> Marc0: this is security implications you know.
+[16:52:29] <fabrice> it's fine to have a way to get root access, but that should not be on by default
+[16:52:32] <Marc0> fabrice: don't get this :/
+[16:52:51] <fabrice> why do you need root access for?
+[16:53:11] <Alinea> fabrice: I agree on that. Apparently I wrongly assumed that the ability to get root access depends mostly on the OS.
+[16:53:35] <Marc0> to play with, to upgrade (stuck on 2.0), to get some kind of proxy implementation, ..
+[16:53:51] <Marc0> or use my CA cert 
+[16:54:11] <eyome> to do whatever you want, simply
+[16:54:12] <Marc0> I cannot even have mail access with my mailservers as this is "insecure"
+[16:54:21] <Marc0> eyome: exactly
+[16:54:28] <Alinea> There's no way to import SSL certs?
+[16:54:36] <Marc0> Alinea: no
+[16:54:42] <Marc0> (away
+[16:54:43] <Alinea> That's unfortunate
+[16:55:14] <fabrice> eyome: Marc0: you realize that "using your CA cert" could also be "sideload an evil CA cert to do MITM attacks" I guess
+[16:55:22] <fabrice> so that can't be the default
+[16:56:45] <Marc0> fabrice: it's also dangerous to cross a road... the user should learn responsibility, no?
+[16:57:00] <Marc0> just my opinion
+[16:57:01] <eyome> root mustn't be by default, I totally understand that, but we must enable it on one way or another
+[16:57:12] <eyome> fabrice: ^
+[16:57:12] <Marc0> on any device!
+[16:57:45] <Marc0> (being open)
+[16:59:08] <Alinea> Marc0: That's exactly the point I'm making in my paper, 'being open' also includes the possibility for the user to get access to every part of the system, i.e. root access.
+[16:59:29] <Marc0> fabrice: I don't understand the difference compared to a desktop device running a Firefox browser
+[17:01:29] <Alinea> Another question: Is there some sort of verification system in place that only allows installing apps from the marketplace, and if so, can it be turned off?
+[17:04:51] <eyome> Alinea: no no no, this is the core of Firefox OS principles, all web-sites can be an application
+[17:05:07] <fabrice> Marc0: you should not need real unix level root access to install a cert
+[17:05:55] <Alinea> eyome: I see. That's neat. But the website would need some sort of permission to access the hardware, right?
+[17:07:32] <eyome> Alinea: system asks to allow permission or not, for all permissions
+[17:08:16] <eyome> Alinea: do you know you can try Firefox OS through Firefox destop?
+[17:08:20] <Alinea> So that's what those webAPIs are about.  Nice.
+[17:08:29] <Alinea> eyome: Yes, I have it running here.
+[17:09:40] <eyome> Alinea: :)
+[17:09:44] <Alinea> I really get to like this 'everything is a website'-approach, if you can call it that. ^^
+[17:10:44] <Alinea> Unfortunately my phone isn't supported.
+[17:11:05] <eyome> Alinea: what is your phone?
+[17:11:58] <Alinea> eyome: A Samsung Galaxy Exhibit. I got it for cheap when I stayed in the US for a while, and I've never seen or read about it anywhere else.
+[17:14:28] <eyome> Marc0: it seems you can: https://www.youtube.com/watch?v=B8DXB8KNIRg
+[17:17:07] <fabrice> eyome: Marc0: we need "secure by default" devices, for the general population of non technical users. And we need bootloaders to be unlockable for more adventurous people
+[18:31:31] <dattaz> fabrice: you right but actually, except zte open c and flame, other fxos phone haven't a way to have root...
+[18:35:27] <fabrice> dattaz: that's a different issue
+[18:46:12] <georgeowell> I rooted my ZTE Open C and put the community build on it.
+[18:47:58] <treestatusbot_> Gaia is open!
+[18:53:08] <eyome> georgeowell: Thanks to dattaz xD ! (and others guys also ;)
+[18:54:48] <georgeowell> Yep mad respect to those people!
+[18:55:09] <dattaz> :)
+[18:55:12] <georgeowell> Otherwise I'd still be stuck on 1.3 with no hope of updates
+[19:49:06] <hwine> fyi - gaia repo reopened for commits on github
+[19:57:19] <Porkepix> dattaz: Open have a way
+[19:57:23] <Porkepix> dattaz: Sony devices too
+[19:57:38] <Porkepix> But yeah, really too few devices
+[19:57:51] <georgeowell> Is there a build for the Nexus 4?
+[19:58:04] <Porkepix> georgeowell: Yeah, eyome work on builds for Nexus 4 and 5 iirc
+[19:59:10] <georgeowell> Porkepix, that's great
+[20:00:19] <georgeowell> FFOS on Nexus 5 would be cool.
+[20:00:31] <georgeowell> the Open C hardware is just...
+[20:00:47] <georgeowell> Good old 3mp camera
+[20:00:53] <Porkepix> I also noticed marcia running FxOS on a Nexus 6
+[20:01:00] <Porkepix> Not fully supported though iirc
+[20:01:17] <Porkepix> No, 2 MP :D
+[20:01:28] <georgeowell> 2 
+[20:01:30] <georgeowell> o jeez
+[20:01:48] <georgeowell> It's not making for good holiday snaps, I'll tell you that.
+[20:01:53] <Porkepix> But if your wish is to have a good photo phone, Sony Xperia devices would be the best deal
+[20:02:17] <Porkepix> Only beaten by Nokia phones, but to have a decent OS on Nokia phones… have fun ;o
+[20:02:28] <georgeowell> Yeh too true
+[20:02:43] <georgeowell> Actually, the most annoying thing about the Open C is the speaker
+[20:02:55] <georgeowell> it's really hard to hear what people are saying on the other end
+[20:03:08] <Porkepix> And the cheap button, and the broken LED by ZTE, and…
+[20:03:09] <georgeowell> unless you're in total silence
+[20:03:15] <Porkepix> The list can be long :D
+[20:03:17] <georgeowell> the list goes on...
+[20:04:11] <georgeowell> That LED thing is just dumb. If there's anyone from ZTE here (there isn't) I'm sorry but you guys suck
+[20:04:49] <Porkepix> georgeowell: Nah, the worst is that people like dattaz checked and it looks like the only file that changed between B02 and B03 is the modem driver
+[20:05:01] <Porkepix> So they were able to break the LED by changing LED driver
+[20:05:05] <Porkepix> That's…pretty fun.
+[20:05:18] <Porkepix> s/LED/modem/
+[20:06:41] * georgeowell facepalms
+[20:07:14] <georgeowell> I think if the community repo didn't exist I would have had to get a new phone ages ago
+[20:12:24] <georgeowell> being trapped on a really old version is no fun
+[20:12:48] <georgeowell> I guess that's standard for most android users
