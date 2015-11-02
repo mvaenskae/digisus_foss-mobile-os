@@ -24,21 +24,26 @@
 \pagestyle{empty}
 
 % Spacings in the document
-\setlength{\columnsep}{15pt}
+\setlength{\columnsep}{1.5\baselineskip}
 \titlespacing{\section}{0pt}{*0}{*0}
 \titlespacing{\subsection}{0pt}{*0}{*0}
 \titlespacing{\subsubsection}{0pt}{*0}{*0}
 \setlength{\parskip}{0pt}
 \setlength{\parsep}{0pt}
 
-% Set counterlevel one down
+% No section numbering
 \setcounter{secnumdepth}{-1}
 
-% Penalties
-\widowpenalty=500
-\clubpenalty=500
-\hyphenpenalty=500
-\tolerance=500
+% Penalties for widows/orphans (lines at top/bottom of page ending/starting)
+\widowpenalty = 500 %default 150
+\clubpenalty = 500 %default 150
+
+% Hypenation penalties and settings
+\hyphenpenalty = 1000
+\tolerance = 2000
+%\emergencystretch=10pt
+\lefthyphenmin = 4
+\righthyphenmin = 4
 
 \begin{document}
 	\input{./cover.tex}
@@ -53,36 +58,32 @@
 	\fancyhead{}
 	\fancyfoot{}
 	\fancyhead[LO,RE]{HS -- 2015}
-	\fancyhead[CO,CE]{Open Source Mobiles}
+	\fancyhead[CO,CE]{\textsc{Open Source Mobiles}}
 	\fancyhead[RO,LE]{Digitale Nachhaltigkeit}
 	\fancyfoot[RO,LE]{\thepage}
 	\fancyfoot[LO,RE]{\includegraphics[height=5mm]{by-nc-sa-eu.png}}
-	%\begin{multicols}{2}
 	\begin{multicols*}{2}
-		\raggedcolumns
-		%\begin{refsection}
-			%\setcounter{figure}{0}
-			%\setcounter{table}{0}
-	
+		%\raggedcolumns
+
 		\section{Einführung}
 		\input{chapters/00_intro}
 		\pagebreak
 		
 		\section{Android}
 		\input{chapters/10_android}
-		%\pagebreak
+		\pagebreak
 		
 		\section{Firefox OS}
 		\input{chapters/11_firefox-os}
-		%\pagebreak
+		\pagebreak
 		
 		\section{Sailfish OS}
 		\input{chapters/12_sailfish-os}
-		%\pagebreak
+		\pagebreak
 		
 		\section{Maemo}
 		\input{chapters/13_maemo}
-		%\pagebreak
+		\pagebreak
 		
 		\section{Ubuntu Touch}
 		\input{chapters/14_ubuntu-touch}
@@ -94,7 +95,7 @@
 		\input{chapters/15_ios}
 		\pagebreak
 		
-		\section {Auswirkungen auf Hardware-Anbieter}
+		\section {Auswirkungen}
 		\input{chapters/20_hardware}
 		\vfill
 		\columnbreak
@@ -104,7 +105,5 @@
 		\pagebreak
 		
 		\printbibliography
-		%\end{refsection}
 	\end{multicols*}
-	%\end{multicols}
 \end{document}
