@@ -6,7 +6,7 @@ Der in Firefox OS verwendete Kernel wurde vom Android Open Source Project übern
 
 Andreas Gal, der damalige Director of Research von Mozilla, behauptete nach der Veröffentlichung von Firefox OS in 2012, dass im ganzen Betriebssystem keine proprietäre Software involviert sei\thinspace\cite{online:knowyourmobile-b2g}. Leider blieb das nicht so: 2014 begann Mozilla, die ``\mbox{W3C Encrypted Media Extension}'' (EME) zu implementieren\thinspace\cite{online:mozilla-eme}. Die EME  ist eine Erweiterung, die es ermöglicht, \mbox{DRM-geschützte} Webinhalte nativ --- also ohne die Verwendung von Plugins --- auszuführen. Dazu ist die Benutzung eines proprietären Entschlüsselungsmoduls nötig\thinspace\cite{online:mozilla-eme}, welches mittlerweile in Gecko --- und somit auch in Firefox OS --- enthalten ist.
 
-Grund für diesen Entscheid war, dass Firefox und Firefox OS, um mit der Konkurrenz durch Apple und Google mitzuhalten, das Abspielen von \mbox{DRM-geschützten} Inhalten ermöglichen muss. Netflix beispielsweise nutzt EME, um seine Inhalte auf Endgeräten abzuspielen. Firefox-Nutzer hätten einen anderen Browser verwenden müssen, um solche Inhalte abzuspielen\thinspace\cite{online:mozilla-eme}.
+Grund für diesen Entscheid war, dass Firefox und Firefox OS, um mit der Konkurrenz durch Apple und Google mitzuhalten, das Abspielen von \mbox{DRM-geschützten} Inhalten ermöglichen muss. Netflix beispielsweise nutzt die EME, um seine Inhalte auf Endgeräten abzuspielen. Firefox-Nutzer hätten einen anderen Browser verwenden müssen, um solche Inhalte abzuspielen\thinspace\cite{online:mozilla-eme}.
 
 Mozilla war über diesen Entscheid selbst nicht glücklich\thinspace\cite{online:ff-drm-implementation}, hielt den Kompromiss aber für notwendig, um marktfähig zu bleiben. Das Resultat ist, dass Firefox OS nun kein vollständig freies Betriebssystem mehr ist. 
 \newline
@@ -16,10 +16,8 @@ Firefox OS verwendet ein interessantes Konzept: Das System baut auf Gecko auf un
 
 Durch das Benutzen von WebAPIs kann theoretisch jede Webseite mit der Hardware interagieren und so eine App sein. Als Konsequenz davon können standardmässig Webseiten und Apps aus beliebigen Quellen ausgeführt und auch installiert werden. Eine weitere Konsequenz davon ist, dass der Quellcode von Apps immer eingesehen werden kann, da HTML5 und Javascript Skriptsprachen sind, die nicht kompiliert werden. Für Webseiten gilt dies allerdings nicht, da diese beispielsweise ein PHP-Backend haben können, welches für den Besucher nicht einsehbar ist. Ausserdem gibt es Möglichkeiten, Javascript-Code zu ``verschleiern'', also so weit zu verunstalten, dass er nicht mehr lesbar ist\thinspace\cite{online:yui-compressor}.
 
-%TODO References
-
-Ob das Erlangen von ``root''-Rechten auf Firefox OS möglich ist, hängt vom Gerät ab. Das Flame, ein von Firefox in Kooperation mit T2Mobile entwickeltes Smartphone, welches mit Firefox OS ausgeliefert wird und primär für Entwickler gedacht ist\thinspace\cite{online:ff-flame}, ist standardmässig gerootet(IRC Log).
-Andere Firefox OS Telefone sind hingegen schwerer zu rooten(IRC). Da dies aber nicht direkt vom Betriebssystem abhängig ist, gehe ich hier nicht weiter darauf ein.
+Ob das Erlangen von ``root''-Rechten auf Firefox OS möglich ist, hängt vom Gerät ab. Das Flame, ein von Firefox in Kooperation mit T2Mobile entwickeltes Smartphone, welches mit Firefox OS ausgeliefert wird und primär für Entwickler gedacht ist\thinspace\cite{online:ff-flame}, ist standardmässig gerootet\thinspace\cite{irc:fxos}.
+Andere Firefox OS Telefone sind hingegen schwerer zu rooten\thinspace\cite{irc:fxos}. Da dies aber nicht direkt vom Betriebssystem abhängig ist, gehe ich hier nicht weiter darauf ein.
 \newline
 
 \subsection{Community}
