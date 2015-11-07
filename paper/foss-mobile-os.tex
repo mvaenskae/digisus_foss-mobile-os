@@ -8,7 +8,7 @@
 \usepackage{fancyhdr,parskip,setspace,url,tabularx,float,hypcap,multicol,enumitem}
 \usepackage[pdftex]{color,graphicx}
 \usepackage[font=scriptsize,format=plain,labelfont=bf,textfont=it,justification=justified,singlelinecheck=false,skip=0.05cm,labelsep=endash]{caption}
-\usepackage[a4paper,left=20mm,right=20mm,top=30mm]{geometry}
+\usepackage[a4paper,left=20mm,right=20mm,top=28mm,bottom=26mm]{geometry}
 \usepackage[compact]{titlesec}
 
 % Path for images
@@ -24,22 +24,26 @@
 \pagestyle{empty}
 
 % Spacings in the document
-\setlength{\columnsep}{20pt}
+\setlength{\columnsep}{1.5\baselineskip}
 \titlespacing{\section}{0pt}{*0}{*0}
 \titlespacing{\subsection}{0pt}{*0}{*0}
 \titlespacing{\subsubsection}{0pt}{*0}{*0}
-%\setlength{\parskip}{0.5\baselineskip plus2pt minus2pt}
 \setlength{\parskip}{0pt}
 \setlength{\parsep}{0pt}
 
-% Set counterlevel one down
+% No section numbering
 \setcounter{secnumdepth}{-1}
 
-% Penalties
-\widowpenalty=500
-\clubpenalty=500
-\hyphenpenalty=500
-\tolerance=500
+% Penalties for widows/orphans (lines at top/bottom of page ending/starting)
+\widowpenalty = 500 %default 150
+\clubpenalty = 500 %default 150
+
+% Hypenation penalties and settings
+\hyphenpenalty = 1000
+\tolerance = 2000
+%\emergencystretch=10pt
+\lefthyphenmin = 4
+\righthyphenmin = 4
 
 \begin{document}
 	\input{./cover.tex}
@@ -54,54 +58,68 @@
 	\fancyhead{}
 	\fancyfoot{}
 	\fancyhead[LO,RE]{HS -- 2015}
-	\fancyhead[CO,CE]{Open Source Mobiles}
+	\fancyhead[CO,CE]{\textsc{Open Source Mobiles}}
 	\fancyhead[RO,LE]{Digitale Nachhaltigkeit}
 	\fancyfoot[RO,LE]{\thepage}
 	\fancyfoot[LO,RE]{\includegraphics[height=5mm]{by-nc-sa-eu.png}}
 	\begin{multicols*}{2}
-		\raggedcolumns
-		\begin{refsection}
-			\setcounter{figure}{0}
-			\setcounter{table}{0}
-	
-			\section{Einführung}
-			\input{chapters/00_intro}
-			\pagebreak
-			
-			\section{Android}
-			\input{chapters/10_android}
-			\pagebreak
-			
-			\section{Firefox OS}
-			\input{chapters/11_firefox-os}
-			\pagebreak
-			
-			\section{Sailfish OS}
-			\input{chapters/12_sailfish-os}
-			\pagebreak
-			
-			\section{Maemo}
-			\input{chapters/13_maemo}
-			\pagebreak
-			
-			\section{Ubuntu Touch}
-			\input{chapters/14_ubuntu-touch}
-			\pagebreak
-			
-			\section{iOS}
-			\input{chapters/15_ios}
-			\pagebreak
-			
-			\section {Auswirkungen auf Hardware-Anbieter}
-			\input{chapters/20_hardware}
-			\vfill
-			\columnbreak
-			
-			\section{Schlusswort}
-			\input{chapters/21_fin}
-			\pagebreak
-			
-			\printbibliography
-		\end{refsection}
+		%\raggedcolumns
+
+		\section{Einführung}
+		{\normalsize \mbox{}}\\
+		\input{chapters/00_intro}
+		\pagebreak
+		
+		\section{Android}
+		{\scriptsize Aline Abler}\\
+		{\normalsize \mbox{}}\\
+		\input{chapters/10_android}
+		\pagebreak
+		
+		\section{Firefox OS}
+		{\scriptsize Aline Abler}\\
+		{\normalsize \mbox{}}\\
+		\input{chapters/11_firefox-os}
+		\pagebreak
+		
+		\section{Sailfish OS}
+		{\scriptsize Mickey Vänskä}\\
+		{\normalsize \mbox{}}\\
+		\input{chapters/12_sailfish-os}
+		\pagebreak
+		
+		\section{Maemo}
+		{\scriptsize Mickey Vänskä}\\
+		{\normalsize \mbox{}}\\
+		\input{chapters/13_maemo}
+		\pagebreak
+		
+		\section{Ubuntu Touch}
+		{\scriptsize Sandro Kalbermatter}\\
+		{\normalsize \mbox{}}\\
+		\input{chapters/14_ubuntu-touch}
+		\newline
+		\newline
+		%\pagebreak
+		
+		\section{iOS}
+		{\scriptsize Sandro Kalbermatter}\\
+		{\normalsize \mbox{}}\\
+		\input{chapters/15_ios}
+		\pagebreak
+		
+		\section {Auswirkungen}
+		{\normalsize \mbox{}}\\
+		\input{chapters/20_hardware}
+		%\vfill
+		%\columnbreak
+		\newline
+		\newline
+				
+		\section{Schlusswort}
+		\input{chapters/21_fin}
+		\pagebreak
+		
+		\printbibliography
 	\end{multicols*}
 \end{document}
