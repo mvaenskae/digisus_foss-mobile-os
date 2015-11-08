@@ -1,1 +1,0 @@
-Firefox OS wird hauptsächlich von Mozilla entwickelt und basiert zum einen auf dem Linuxkernel und zum anderen auf Gecko, dem HTML-Renderer von Mozilla Firefox.
