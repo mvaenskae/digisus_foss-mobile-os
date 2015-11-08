@@ -10,6 +10,9 @@
 \usepackage[font=scriptsize,format=plain,labelfont=bf,textfont=it,justification=justified,singlelinecheck=false,skip=0.05cm,labelsep=endash]{caption}
 \usepackage[a4paper,left=20mm,right=20mm,top=28mm,bottom=26mm]{geometry}
 \usepackage[compact]{titlesec}
+\usepackage{listings}
+
+\lstset{breaklines=true}
 
 % Path for images
 \graphicspath{{images/}}
@@ -122,4 +125,10 @@
 		
 		\printbibliography
 	\end{multicols*}
+		
+	\pagebreak
+	
+	\section{Appendix}
+	\subsection{IRC Log from \#fxos}
+		\lstinputlisting{inputs/fxos-log-cleaned}
 \end{document}
